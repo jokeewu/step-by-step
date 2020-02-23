@@ -9,12 +9,12 @@
 * 代码（组件）复用
 * 代码（代码片段、组件）性能优化，`参考具体框架优化方案`
 * 去掉无用代码，如：Tree shaking，`参考Webpack`
-* DNS prefetch（DNS预解析）
+* DNS prefetch（DNS预解析）
 
 #### 浏览器端
 
 * 缓存，如：数据缓存xxxStorage、304
-* 减少请求头，如：Cookies
+* 减少请求头，如：Cookies
 
 #### 服务器端
 

@@ -9,7 +9,7 @@
 * [浏览器](./foundation/browser.md)
 * [操作系统与网络](./foundation/os-and-network.md)
 
-## 框架/库
+## 框架/库
 
 * [React](./frame-and-lib/react.md)
 * [VUE](./frame-and-lib/vue.md)
