@@ -4,11 +4,21 @@
 
 ### **严格模式**
 
-### **数据类型**
+参见：[https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Strict_mode](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Strict_mode)
 
-number string boolean undefined null object symbol
+### **数据类型/原始值**
+
+原始值类型：Number、BigInt、String、Boolean、Undefined、Null、Symbol
+
+引用类型：Object
+
+null是原始值，为什么`typeof null === 'object'`？参见：
+- [https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Operators/typeof#null](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Operators/typeof#null)
+- [https://2ality.com/2013/10/typeof-null.html](https://2ality.com/2013/10/typeof-null.html)
 
 ### **实现继承方式**
+
+参见：[https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Inheritance_and_the_prototype_chain](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Inheritance_and_the_prototype_chain)
 
 #### **原型继承**
 #### **构造函数继承**
@@ -25,6 +35,7 @@ number string boolean undefined null object symbol
 ### **箭头函数，this指向**
 
 词法作用域，由其上下文决定，参见：[https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Functions/arrow_functions](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Functions/arrow_functions)
+
   - apply/call/bind无法修改this指向
   - 不绑定arguments
   - 箭头函数不能作为构造函数，和new一起使用会报错
@@ -36,15 +47,16 @@ number string boolean undefined null object symbol
 
 参见：
 
-原始值：https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Data_structures
+原始值：
+- https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Data_structures
+- https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/toString
+- https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/valueOf
 
-https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/toString
+### **===/==，相等判断**
 
-https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/valueOf
-
-### **===/==**
-
-https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Operators/Comparison_Operators
+参见：
+- [https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Equality_comparisons_and_sameness](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Equality_comparisons_and_sameness)
+- [https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Operators/Comparison_Operators](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Operators/Comparison_Operators)
 
 ### **Promise.reslove(1).then().then()**
 
@@ -60,7 +72,20 @@ https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects
 
 ### **标记模版字面量如何使用？**
 
-### **null/undefined区别
+### **null/undefined区别**
+
+undefined
+* 一个声明未定义的变量的初始值，或没有实际参数的形式参数
+* undefined作为全局对象的一个属性
+
+null
+* 表示缺少的标识，特指对象的值未设置
+
+参见：
+- [https://developer.mozilla.org/en-US/docs/Glossary/undefined](https://developer.mozilla.org/en-US/docs/Glossary/undefined)
+- [https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/undefined](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/undefined)
+- [https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/null](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/null)
+- []()
 
 ### **Common JS/Import区别**
 
