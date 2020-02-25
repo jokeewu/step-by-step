@@ -18,20 +18,60 @@
 
 ### **实现继承方式**
 
-参见：[https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Inheritance_and_the_prototype_chain](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Inheritance_and_the_prototype_chain)
+对继承的理解：拷贝一个或多个对象的属性或方法到另一对象上，或一个或多个对象的属性或方法被另一个对象共享（单向的）（如：原型链）
+
+参见：
+- [https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Inheritance_and_the_prototype_chain](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Inheritance_and_the_prototype_chain)
+- [https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/create](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/create)
+- [https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/setPrototypeOf](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/setPrototypeOf)
+- [https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/assign](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/assign)
 
 #### **原型继承**
+
+```javascript
+function Person() {}
+Person.prototype = {
+  constructor: Person,
+  // ...
+}
+```
+
 #### **构造函数继承**
+
+```javascript
+function Parent() {}
+function Child() {
+  Parent.call(this)
+  // ...
+}
+```
+
 #### **组合继承（原型+构造函数）**
 
-### **func.bind(obj1).bind(obj2).bind(obj3)**
-
-参见：[https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Function/bind](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Function/bind)
+```javascript
+// TODO
+```
 
 ### **闭包、this**
 
 ### **函数柯里化**
 
+### [**func.bind(context)**](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Function/bind)
+
+简单实现：
+```javascript
+function bind(context, func) {
+  return function(...args) {
+    func.call(context, ...args)
+  }
+}
+```
+
+实例：
+```javascript
+func.bind(obj1).bind(obj2).bind(obj3)
+// 不难看出func执行bind后（不管多少个），都只跟第一个绑定对象有关
+```
 ### **箭头函数，this指向**
 
 词法作用域，由其上下文决定，参见：[https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Functions/arrow_functions](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Functions/arrow_functions)
@@ -58,9 +98,7 @@
 - [https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Equality_comparisons_and_sameness](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Equality_comparisons_and_sameness)
 - [https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Operators/Comparison_Operators](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Operators/Comparison_Operators)
 
-### **Promise.reslove(1).then().then()**
-
-### **async、await, iterator、generator**
+### **Promise、async、await, iterator、generator**
 
 http://www.ruanyifeng.com/blog/2015/05/async.html
 http://www.ruanyifeng.com/blog/2015/04/generator.html
@@ -68,9 +106,9 @@ http://www.ruanyifeng.com/blog/2015/04/generator.html
 ### **for...of与for…in区别**
 
 for…of对象必须包含Symbol.iterator属性，不能遍历普通对象
-https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/iterator
 
-### **标记模版字面量如何使用？**
+参见：
+- [https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/iterator](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/iterator)
 
 ### **null/undefined区别**
 
@@ -114,11 +152,13 @@ undefined
 
 参见：[https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/EventLoop](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/EventLoop)
 
+### **setTimeout(f, 0)使用场景**
+
+作为宏任务，参见[Event Loop](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/EventLoop)，延迟执行
+
 ### **Ajax/Fetch，fetch有哪些优势？**
 
 参见：[https://www.cnblogs.com/chris-oil/p/6014323.html](https://www.cnblogs.com/chris-oil/p/6014323.html)
-
-### **setTimeout(f, 0)使用场景**
 
 ### **Cookie，session，localStorage，sessionStorage，后端怎么存储session?**
 
@@ -126,4 +166,4 @@ undefined
 
 ### **跨域解决方案**
 
-jsonp，proxy，header(Access-Control-Allow-Origin)，domain，name，postMessage
+jsonp，`proxy`，`header(Access-Control-Allow-Origin)`，domain，name，postMessage
