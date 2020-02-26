@@ -26,31 +26,90 @@ null是原始值，为什么`typeof null === 'object'`？参见：
 - [https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/setPrototypeOf](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/setPrototypeOf)
 - [https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/assign](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/assign)
 
+定义父类：
+```javascript
+function Parent() {
+  this.prop = ''
+}
+Parent.prototype.method = function() {}
+```
+
 #### **原型继承**
 
 ```javascript
-function Person() {}
-Person.prototype = {
-  constructor: Person,
-  // ...
-}
+function Child() {}
+Child.prototype = new Parent()
+Child.prototype.construcor = Child
 ```
+
+缺点：
+- 无法向父类传递参数
+- 无法实现多继承
 
 #### **构造函数继承**
 
 ```javascript
-function Parent() {}
 function Child() {
-  Parent.call(this)
-  // ...
+  Parent.call(this, /* 父类参数 */)
 }
 ```
+
+优点：
+- 子类构造函数可以向父类构造函数传递参数
+- 可以实现多继承（多个父类call/apply调用）
+
+缺点：
+- 继承父类方法，父类方法只能在构造函数中定义，导致实例无法复用方法
+- 无法继承父类原型属性及方法
 
 #### **组合继承（原型+构造函数）**
 
 ```javascript
-// TODO
+// 通过构造函数继承父类属性
+function Child() {
+  Parent.call(this, /* 父类参数 */)
+}
+// 通过原型继承父类原型属性/方法
+Child.prototype = new Parent()
+Child.prototype.constructor = Child
 ```
+
+缺点：
+- 父类存在两次实例创建
+
+#### **寄生组合继承**
+
+```javascript
+// 通过构造函数继承属性
+function Child() {
+  Parent.call(this, /* 父类参数 */)
+}
+// 通过原型继承父类原型属性方法
+// (function() {
+//   const Super = function() {}
+//   Super.prototype = Parent.prototype
+//   Child.prototype = new Super()
+//   Child.prototype.constructor = Child
+// })()
+Child.prototype = Object.create(Parent.prototype)
+Child.prototype.constructor = Child
+```
+
+#### ~~**拷贝继承**~~
+
+#### ~~**实例继承**~~
+
+#### **es6实现继承**
+
+```javascript
+class Child extends Parent {
+  constructor() {
+    super(/* 父类属性 */)
+  }
+}
+```
+
+![es6-class](./images/javascript/es6-class.jpeg)
 
 ### **闭包、this**
 
@@ -125,24 +184,31 @@ null
 - [https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/null](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/null)
 - []()
 
-### **Common JS/Import区别**
-
-### **export/export default区别**
+### **CommonJS模块与ES6模块区别**
 
 ---
 ---
 
 ## **宿主环境**
 
-### **e.target,e.currentTarget分别指的什么？**
-
 ### **DOM事件**
 
-阶段：捕获、目标、冒泡
-
-事件委托
+阶段：捕获(**Document节点->目标节点**)、目标、冒泡(**目标节点->Document节点**)
 
 级别：DOM0、DOM2、DOM3
+
+参见：
+- [https://juejin.im/post/5cea4a485188251a115f3ef9](https://juejin.im/post/5cea4a485188251a115f3ef9)
+
+### **e.target,e.currentTarget分别指的什么？**
+
+e.target为触发事件的对象
+
+e.currentTarget为事件绑定的元素
+
+参考：
+- [https://developer.mozilla.org/zh-CN/docs/Web/API/Event/currentTarget](https://developer.mozilla.org/zh-CN/docs/Web/API/Event/currentTarget)
+- [https://developer.mozilla.org/zh-CN/docs/Web/API/Event/target](https://developer.mozilla.org/zh-CN/docs/Web/API/Event/target)
 
 ### **script标签async、defer属性**
 
