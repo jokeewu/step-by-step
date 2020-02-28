@@ -2,6 +2,26 @@
 
 ### **生命周期**
 
+挂载阶段(Mounting)：
+- constructor()
+- static getDerivedStateFromProps()
+- render()
+- componentDidMount()
+
+更新阶段(Updating)：
+- static getDerivedStateFromProps()
+- shouldComponentUpdate()
+- render()
+- getSnapshotBeforeUpdate()
+- componentDidUpdate()
+
+卸载阶段(Unmounting)：
+- componentWillUnmount()
+
+错误处理(Error Handling)：
+- static getDerivedStateFromError()
+- componentDidCatch()
+
 参见：[https://reactjs.org/docs/react-component.html](https://reactjs.org/docs/react-component.html)
 
 ### **componentWillReceiveProps取消原因**
