@@ -16,6 +16,10 @@ null是原始值，为什么`typeof null === 'object'`？参见：
 - [https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Operators/typeof#null](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Operators/typeof#null)
 - [https://2ality.com/2013/10/typeof-null.html](https://2ality.com/2013/10/typeof-null.html)
 
+### **原型/原型链**
+
+![https://user-gold-cdn.xitu.io/2019/2/14/168e9d9b940c4c6f?imageView2/0/w/1280/h/960/format/webp/ignore-error/1](https://user-gold-cdn.xitu.io/2019/2/14/168e9d9b940c4c6f?imageView2/0/w/1280/h/960/format/webp/ignore-error/1)
+
 ### **实现继承方式**
 
 对继承的理解：拷贝一个或多个对象的属性或方法到另一对象上，或一个或多个对象的属性或方法被另一个对象共享（单向的）（如：原型链）
@@ -184,6 +188,8 @@ null
 - [https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/null](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/null)
 
 ### **CommonJS模块与ES6模块区别**
+
+### **执行上下文**
 
 ---
 ---
