@@ -1,5 +1,6 @@
 # 树(Tree)
 
+定义树的节点：
 ```javascript
 function TreeNode(val) {
   this.val = val
@@ -14,16 +15,36 @@ function TreeNode(val) {
 #### 先序遍历
 
 ```javascript
-function iterate(root) {
+// 递归版本
+function traverse(root) {
   if (!root) {
     return
   }
   console.log(root.val)
   if (root.left) {
-    iterate(root.left)
+    traverse(root.left)
   }
   if (root.right) {
-    iterate(root.right)
+    traverse(root.right)
+  }
+}
+// 迭代版本
+function traverse_i(root) {
+  if (!root) {
+    return
+  }
+  const stack = []
+  root.push(root)
+  while(stack.length !== 0) {
+    root = stack.pop()
+    console.log(root)
+    // 注意以下节点必须先右再左
+    if (root.right) {
+      stack.push(root.right)
+    }
+    if (root.left) {
+      stack.push(root.left)
+    }
   }
 }
 ```
@@ -31,16 +52,33 @@ function iterate(root) {
 #### 中序遍历
 
 ```javascript
-function iterate(root) {
+// 递归版本
+function traverse(root) {
   if (!root) {
     return
   }
   if (root.left) {
-    iterate(root.left)
+    traverse(root.left)
   }
   console.log(root.val)
   if (root.right) {
-    iterate(root.right)
+    traverse(root.right)
+  }
+}
+// 迭代版本
+function traverse_i(root) {
+  const stack = []
+  while(true) {
+    if (root) {
+      stack.push(root)
+      root = root.left
+    } else if (stack.length !== 0) {
+      root = stack.pop()
+      console.log(root.val)
+      root = root.right
+    } else {
+      break
+    }
   }
 }
 ```
@@ -48,15 +86,15 @@ function iterate(root) {
 #### 后序遍历
 
 ```javascript
-function iterate(root) {
+function traverse(root) {
   if (!root) {
     return
   }
   if (root.left) {
-    iterate(root.left)
+    traverse(root.left)
   }
   if (root.right) {
-    iterate(root.right)
+    traverse(root.right)
   }
   console.log(root.val)
 }
@@ -65,7 +103,7 @@ function iterate(root) {
 #### 层次遍历
 
 ```javascript
-function iterate(root) {
+function traverse(root) {
   let queue = new Queue()
   queue.enqueue(root)
   while(!queue.empty()) {
