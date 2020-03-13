@@ -189,6 +189,9 @@ null
 
 ### **CommonJS模块与ES6模块区别**
 
+参见：
+- [https://auth0.com/blog/javascript-module-systems-showdown/](https://auth0.com/blog/javascript-module-systems-showdown/)
+
 ### **执行上下文**
 
 ---
@@ -223,18 +226,23 @@ e.currentTarget为事件绑定的元素
 
 参见：[https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/EventLoop](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/EventLoop)
 
-### **setTimeout(f, 0)使用场景**
-
-作为宏任务，参见[Event Loop](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/EventLoop)，延迟执行
-
 ### **Ajax/Fetch，fetch有哪些优势？**
 
-参见：[https://www.cnblogs.com/chris-oil/p/6014323.html](https://www.cnblogs.com/chris-oil/p/6014323.html)
+参见：
+
+- [https://www.cnblogs.com/chris-oil/p/6014323.html](https://www.cnblogs.com/chris-oil/p/6014323.html)
+- [https://developer.mozilla.org/zh-CN/docs/Web/API/XMLHttpRequest](https://developer.mozilla.org/zh-CN/docs/Web/API/XMLHttpRequest)
+- [https://developer.mozilla.org/zh-CN/docs/Web/API/Fetch_API](https://developer.mozilla.org/zh-CN/docs/Web/API/Fetch_API)
 
 ### **Cookie，session，localStorage，sessionStorage，后端怎么存储session?**
 
-参见：[https://developer.mozilla.org/zh-CN/docs/Web/HTTP/Cookies](https://developer.mozilla.org/zh-CN/docs/Web/HTTP/Cookies)
+参见：
+- [https://developer.mozilla.org/zh-CN/docs/Web/HTTP/Cookies](https://developer.mozilla.org/zh-CN/docs/Web/HTTP/Cookies)
+- [https://developer.mozilla.org/zh-CN/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API](https://developer.mozilla.org/zh-CN/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API)
 
 ### **跨域解决方案**
 
 jsonp，`proxy`，`header(Access-Control-Allow-Origin)`，domain，name，postMessage
+
+- [https://developer.mozilla.org/zh-CN/docs/Web/API/Window/postMessage](https://developer.mozilla.org/zh-CN/docs/Web/API/Window/postMessage)
+- [https://developer.mozilla.org/zh-CN/docs/Web/HTTP/Access_control_CORS](https://developer.mozilla.org/zh-CN/docs/Web/HTTP/Access_control_CORS)

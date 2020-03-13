@@ -28,3 +28,7 @@
 
 * [优化](./other/optimization.md)
 * [面试](./other/interview.md)
+
+## 优质博客
+
+* [阮一峰的网络日志](http://www.ruanyifeng.com/blog/)
