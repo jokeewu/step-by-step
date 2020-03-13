@@ -1,4 +1,4 @@
-# 前端重要知识点
+# Step by step
 
 ## 基础
 
@@ -11,8 +11,7 @@
 
 ## 框架/库
 
-* [React](./frame-and-lib/react.md)
-* [VUE](./frame-and-lib/vue.md)
+* [React/VUE](./frame-and-lib/react-vue.md)
 * [Component](./frame-and-lib/component.md)
 
 ## [数据结构与算法](./data-structure-and-algorithm/index.md)
