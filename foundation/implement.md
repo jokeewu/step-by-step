@@ -20,6 +20,8 @@ JSON.stringify
 
 递归，循环引用，不同数据类型
 
+参见：[https://juejin.im/post/5d6aa4f96fb9a06b112ad5b1](https://juejin.im/post/5d6aa4f96fb9a06b112ad5b1)
+
 ### **长列表**
 
 考虑性能

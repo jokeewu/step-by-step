@@ -191,6 +191,7 @@ null
 
 参见：
 - [https://auth0.com/blog/javascript-module-systems-showdown/](https://auth0.com/blog/javascript-module-systems-showdown/)
+- [https://es6.ruanyifeng.com/#docs/module-loader#ES6-%E6%A8%A1%E5%9D%97%E4%B8%8E-CommonJS-%E6%A8%A1%E5%9D%97%E7%9A%84%E5%B7%AE%E5%BC%82](https://es6.ruanyifeng.com/#docs/module-loader#ES6-%E6%A8%A1%E5%9D%97%E4%B8%8E-CommonJS-%E6%A8%A1%E5%9D%97%E7%9A%84%E5%B7%AE%E5%BC%82)
 
 ### **执行上下文**
 
