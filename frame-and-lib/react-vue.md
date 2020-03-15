@@ -87,3 +87,23 @@ func hoc() {
 ---
 
 ## **VUE知识点**
+
+### **生命周期**
+
+参见：[https://cn.vuejs.org/v2/guide/instance.html#%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F%E5%9B%BE%E7%A4%BA](https://cn.vuejs.org/v2/guide/instance.html#%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F%E5%9B%BE%E7%A4%BA)
+
+### **响应式系统原理**
+
+参见：
+- [https://cn.vuejs.org/v2/guide/reactivity.html](https://cn.vuejs.org/v2/guide/reactivity.html)
+- [https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty)
+
+### **动态组件/异步组件**
+
+参见：
+- [https://cn.vuejs.org/v2/guide/components-dynamic-async.html](https://cn.vuejs.org/v2/guide/components-dynamic-async.html)
+
+### **keep-alive**
+
+参见：
+- [https://cn.vuejs.org/v2/api/#keep-alive](https://cn.vuejs.org/v2/api/#keep-alive)
